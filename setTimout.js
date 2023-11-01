@@ -21,9 +21,19 @@
 //     setTimeout(fn3,1000)
 // }, 1000);
 // clearInterval(hu);
-const fn4 = () => {
-    console.log("Lakshmikant");
-    setTimeout(fn4, 1000);
-};
+// const fn4 = () => {
+//     console.log("Lakshmikant");
+//     setTimeout(fn4, 1000);
+// };
 
-setTimeout(fn4, 1000);
+// setTimeout(fn4, 1000);
+
+// callback function
+function greet(name){
+    console.log(`Hello ${name}`)
+}
+function greetVishwas(greetFn){
+    const name = "Vishwas";
+    greetFn(name)
+}
+greetVishwas(greet);
