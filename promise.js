@@ -103,7 +103,7 @@ pro.then((s)=>{
     console.log(s)
     console.log("s")
 }).catch((u)=>{
-    // console.log(u)
+    console.log(u)
     console.log("e")
 })
 
@@ -118,3 +118,15 @@ promise
 	}, function (errorMessage) {
 		console.log(errorMessage);
 	});
+const pro1 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,3000,"resolved")
+})
+const pro2 = 58;
+const pro3 = new Promise ((resolve,reject)=>{
+    setTimeout(resolve,3000,"res2")
+})
+Promise.all([pro1,pro2,pro3]).then((v)=>{
+    console.log(v)
+}).catch((e)=>{
+    console.log(e)
+})
