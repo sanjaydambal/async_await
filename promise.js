@@ -46,6 +46,7 @@ promise1.then(onfulfillment).catch(onreject); // Use .catch to handle promise re
 //     }, 3000);
 // });
 
+
 // const onfulfillment = (result) => {
 //     console.log(result);
 //     console.log("Set up the table");
@@ -88,5 +89,32 @@ promise1.then(onfulfillment).catch(onreject); // Use .catch to handle promise re
 //         console.log("At least one promise failed:", err);
 //     });
 
+const pro = new Promise((resolve,reject)=>{
+    const x = "Sanjay";
+    const y = "sanjay";
+    if(x===y){
+        resolve("sanjay success")
+    }
+    else{
+        reject("reject")
+    }
+})
+pro.then((s)=>{
+    console.log(s)
+    console.log("s")
+}).catch((u)=>{
+    // console.log(u)
+    console.log("e")
+})
 
+let promise = new Promise(function (resolve, reject) {
+	resolve('Geeks For Geeks');
+})
 
+promise
+	.then(function (successMessage) {
+		//success handler function is invoked 
+		console.log(successMessage);
+	}, function (errorMessage) {
+		console.log(errorMessage);
+	});
