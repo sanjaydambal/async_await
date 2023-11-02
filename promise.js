@@ -30,10 +30,10 @@ const onfulfillment = (result) => {
     console.log("set up the table");
 };
 
-const onreject = (err) => {
+function onreject(err) {
     console.log(err);
     console.log("Cook Pasta");
-};
+}
 
 promise1.then(onfulfillment).catch(onreject); // Use .catch to handle promise rejection
 // const promise1 = new Promise((resolve, reject) => {
